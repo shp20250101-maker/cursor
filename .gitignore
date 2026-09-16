@@ -6,3 +6,6 @@ __pycache__/
 *.egg-info/
 .venv/
 report.json
+node_modules/
+dist/
+.DS_Store
