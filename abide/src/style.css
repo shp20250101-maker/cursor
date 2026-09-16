@@ -266,6 +266,7 @@ textarea {
 
 .section {
   padding: clamp(4rem, 10vw, 7rem) 1.25rem;
+  scroll-margin-top: 4.5rem;
 }
 
 .section-inner {
