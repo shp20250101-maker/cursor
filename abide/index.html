@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Abide — a quiet daily scripture for reading and meditation."
+    />
+    <title>Abide — Daily Scripture</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,550;9..144,650&family=Sora:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#reading">Skip to today's reading</a>
+
+    <header class="site-nav">
+      <a class="nav-brand" href="#top" aria-label="Abide home">Abide</a>
+      <nav aria-label="Primary">
+        <a href="#reading">Read</a>
+        <a href="#meditate">Meditate</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="brand-title">
+        <div class="hero-sky" aria-hidden="true">
+          <div class="hero-glow"></div>
+          <div class="hero-haze"></div>
+          <svg
+            class="hero-horizon"
+            viewBox="0 0 1440 420"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="hill hill-far"
+              d="M0 260 C 180 220, 320 180, 480 210 C 680 250, 820 160, 980 190 C 1140 220, 1280 250, 1440 230 L 1440 420 L 0 420 Z"
+            />
+            <path
+              class="hill hill-near"
+              d="M0 310 C 220 270, 360 300, 520 280 C 740 250, 900 320, 1100 290 C 1240 270, 1340 300, 1440 285 L 1440 420 L 0 420 Z"
+            />
+            <path
+              class="water"
+              d="M0 350 C 240 330, 480 370, 720 350 C 960 330, 1200 360, 1440 345 L 1440 420 L 0 420 Z"
+            />
+          </svg>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-date" id="hero-date"></p>
+          <h1 id="brand-title" class="brand">Abide</h1>
+          <p class="hero-lead">
+            One scripture each day. Read slowly. Stay with the words.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#reading">Begin reading</a>
+            <a class="btn btn-ghost" href="#meditate">Sit in silence</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="reading" class="section reading" aria-labelledby="reading-title">
+        <div class="section-inner">
+          <p class="section-kicker">Today's reading</p>
+          <h2 id="reading-title" class="section-title">Receive the word</h2>
+          <p class="section-support">
+            Let the verse arrive before you try to explain it.
+          </p>
+
+          <article class="verse-block" id="verse-block">
+            <p class="verse-text" id="verse-text"></p>
+            <cite class="verse-ref" id="verse-ref"></cite>
+          </article>
+        </div>
+      </section>
+
+      <section id="meditate" class="section meditate" aria-labelledby="meditate-title">
+        <div class="section-inner">
+          <p class="section-kicker">Meditation</p>
+          <h2 id="meditate-title" class="section-title">Stay with a phrase</h2>
+          <p class="section-support" id="meditate-prompt"></p>
+
+          <div class="meditate-layout">
+            <div class="timer-panel" aria-labelledby="timer-label">
+              <p id="timer-label" class="panel-label">Quiet minutes</p>
+              <p class="timer-display" id="timer-display" aria-live="polite">05:00</p>
+              <div class="timer-controls">
+                <button type="button" class="btn btn-secondary" id="timer-toggle">
+                  Start
+                </button>
+                <button type="button" class="btn btn-ghost" id="timer-reset">
+                  Reset
+                </button>
+              </div>
+              <div class="timer-presets" role="group" aria-label="Meditation length">
+                <button type="button" class="preset" data-seconds="180">3 min</button>
+                <button type="button" class="preset is-active" data-seconds="300">
+                  5 min
+                </button>
+                <button type="button" class="preset" data-seconds="600">10 min</button>
+              </div>
+            </div>
+
+            <div class="journal-panel">
+              <label class="panel-label" for="journal-note">Private note</label>
+              <textarea
+                id="journal-note"
+                class="journal-note"
+                rows="8"
+                placeholder="A word that stayed with you… a prayer… a question…"
+              ></textarea>
+              <p class="journal-hint" id="journal-hint">Saved only on this device.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span class="footer-brand">Abide</span> — return tomorrow for a new word.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
